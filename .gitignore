@@ -1,5 +1,9 @@
 # Byte-compiled / optimized / DLL files
 __pycache__
 
+# virtualenv
+/venv
+ENV/
+
 # other
 .ipynb_checkpoints
