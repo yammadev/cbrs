@@ -20,7 +20,7 @@ Yefferson Marín - ([@yammadev](https://github.com/yammadev))
 * [Seaborn](https://docs.scipy.org/doc/scipy/reference/spatial.distance.html#module-scipy.spatial.distance)
 
 ## Implementation
-Check the [Jupiter notebook](cbrs.ipynb) with details.
+Check the [Jupiter notebook](cbrs.ipynb) (or [pdf](cbrs.pdf)) with details
 
 ## Input
 ### Library
@@ -132,6 +132,13 @@ All notable changes to this project are documented in this part of the file. The
 - **Removed** for removed features.
 - **Fixed for** any bug fixes.
 - **Security** in case of vulnerabilities.
+
+### [2.3.1] - 2020-04-08
+#### Added
+- `cbrs.pdf` with paper version of `Jupiter Notebook`.
+
+#### Modified
+- `Readme` edited.
 
 ### [2.3.0] - 2020-04-08
 #### Modified
