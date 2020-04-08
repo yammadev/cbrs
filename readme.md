@@ -133,7 +133,11 @@ All notable changes to this project are documented in this part of the file. The
 - **Fixed for** any bug fixes.
 - **Security** in case of vulnerabilities.
 
-### [2.2.0] - 2020-04-07
+### [2.3.0] - 2020-04-08
+#### Modified
+- `Readme` edited.
+
+### [2.2.0] - 2020-04-08
 #### Added
 - `Jupiter Notebook` finished.
 
