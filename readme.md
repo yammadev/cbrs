@@ -11,21 +11,86 @@ Case-based reasoning has been [formalized](https://www.idi.ntnu.no/emner/tdt4171
 ### Author
 Yefferson Marín - ([@yammadev](https://github.com/yammadev))
 
-### Requeriments
-* [Python >3.*](https://python.org)
+## Requeriments
+* [Python 3.*](https://python.org)
 * [Pandas](https://pandas.pydata.org/)
 * [Numpy](https://numpy.org)
 * [Scipy spatial distance](https://docs.scipy.org/doc/scipy/reference/spatial.distance.html#module-scipy.spatial.distance)
+* [Matplotlib](https://matplotlib.org)
+* [Seaborn](https://docs.scipy.org/doc/scipy/reference/spatial.distance.html#module-scipy.spatial.distance)
 
 ## Implementation
 Check the [Jupiter notebook](cbrs.ipynb) with details.
 
 ## Input
-* **Library** at [input/library.csv](input/library.csv)
-* **Cases** at [input/cases.csv](input/cases.csv)
+### Library
+A initial library of cases. At [input/library.csv](input/library.csv)
+
+|Outlook |Temperature|Humidity|Windy |Play|
+|--------|-----------|--------|------|----|
+|Sunny   | Hot       | High   | False| No |
+|Sunny   | Hot       | High   | True | No |
+|Overcast| Hot       | High   | False| Yes|
+|Rainy   | Mild      | High   | False| Yes|
+|Rainy   | Cool      | Normal | False| Yes|
+|Rainy   | Cool      | Normal | True | No |
+|Overcast| Cool      | Normal | True | Yes|
+|Sunny   | Mild      | High   | False| No |
+|Sunny   | Cool      | Normal | False| Yes|
+|Rainy   | Mild      | Normal | False| Yes|
+|Sunny   | Mild      | Normal | True | Yes|
+|Overcast| Mild      | High   | True | Yes|
+|Overcast| Hot       | Normal | False| Yes|
+|Rainy   | Mild      | High   | True | No |
+
+### Cases
+A set of cases/problems to solve. At [input/cases.csv](input/cases.csv)
+
+|Outlook |Temperature|Humidity|Windy |
+|--------|-----------|--------|------|
+|Sunny   | Mild      | Normal | False|
+|Rainy   | Cool      | Normal | False|
+|Overcast| Cool      | High   | False|
+|Sunny   | Cool      | High   | True |
+|Rainy   | Hot       | High   | True |
+|Rainy   | Cool      | High   | True |
 
 ## Output
-TO DO
+### Library
+Initial library plus cases/problems solved. At [output/library.csv](output/library.csv)
+
+|Outlook |Temperature|Humidity|Windy |Play|
+|--------|-----------|--------|------|----|
+|Sunny   | Hot       | High   | False| No |
+|Sunny   | Hot       | High   | True | No |
+|Overcast| Hot       | High   | False| Yes|
+|Rainy   | Mild      | High   | False| Yes|
+|Rainy   | Cool      | Normal | False| Yes|
+|Rainy   | Cool      | Normal | True | No |
+|Overcast| Cool      | Normal | True | Yes|
+|Sunny   | Mild      | High   | False| No |
+|Sunny   | Cool      | Normal | False| Yes|
+|Rainy   | Mild      | Normal | False| Yes|
+|Sunny   | Mild      | Normal | True | Yes|
+|Overcast| Mild      | High   | True | Yes|
+|Overcast| Hot       | Normal | False| Yes|
+|Rainy   | Mild      | High   | True | No |
+|Sunny   | Mild      | Normal | False| Yes|
+|Rainy   | Cool      | Normal | False| Yes|
+|Overcast| Cool      | High   | False| Yes|
+|Sunny   | Cool      | High   | True | Yes|
+|Rainy   | Hot       | High   | True | No |
+|Rainy   | Cool      | High   | True | No |
+
+### Heatmaps
+An image for each Covariance Heatmap, using library cases stored at each iteration base to solve an especific problem. At [output/heatmap_*.png](output)
+
+![heatmap_0](output/covariance_heatmap_0.png)
+![heatmap_1](output/covariance_heatmap_1.png)
+![heatmap_2](output/covariance_heatmap_2.png)
+![heatmap_3](output/covariance_heatmap_3.png)
+![heatmap_4](output/covariance_heatmap_4.png)
+![heatmap_5](output/covariance_heatmap_5.png)
 
 ## Devopment notes
 ```sh
@@ -41,8 +106,9 @@ TO DO
   # (On Windows)
   $ venv\Scripts\activate
 
-  # Install pandas
+  # Install pandas & seaborn
   (venv) $ pip install pandas
+  (venv) $ pip install seaborn
 
   # Deactivate virtual environment
   (venv) $ . venv/bin/deactivate
@@ -67,7 +133,15 @@ All notable changes to this project are documented in this part of the file. The
 - **Fixed for** any bug fixes.
 - **Security** in case of vulnerabilities.
 
-### [2.0.0] - 2020-03-07
+### [2.1.0] - 2020-04-07
+#### Added
+- Outputs and code cleaning.
+
+#### Modified
+- Main functionalities to a better optimizations.
+- `Readme` edited.
+
+### [2.0.0] - 2020-04-07
 #### Added
 - Main functionalities.
 
